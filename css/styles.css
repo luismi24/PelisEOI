@@ -76,11 +76,17 @@ section {
     transition: all 1s ease;
 }
 
-.caratulas div img:hover {
+.caratulas img:hover {
     -webkit-filter: brightness(40%);
     filter: brightness(40%);
     z-index: -1;
 }
+.caratulas div {
+    position: relative;
+    
+}
+
+
 
 .btn {
     display: flex;
