@@ -68,7 +68,6 @@ section {
     padding-left: 31px;
 }
 .caratulas img {
-    padding-bottom: 27px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -81,12 +80,19 @@ section {
     filter: brightness(40%);
     z-index: -1;
 }
-.caratulas div {
+.div1 {
     position: relative;
     
 }
 
-
+.valoraciones {
+    background-color: red;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+}
 
 .btn {
     display: flex;
