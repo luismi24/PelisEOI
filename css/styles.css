@@ -15,7 +15,7 @@ nav {
     width: 100%;
 }
 li a {
-    
+
     text-decoration: none;
     color: #b1b5b8;
 }
@@ -70,6 +70,10 @@ section {
 .caratulas img {
     padding-bottom: 27px;
 }
+.caratulas img:hover {
+    filter: grayscale(70%);
+}
+
 .btn {
     display: flex;
     flex-wrap: wrap;
