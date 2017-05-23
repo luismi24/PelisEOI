@@ -69,9 +69,17 @@ section {
 }
 .caratulas img {
     padding-bottom: 27px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
 }
-.caratulas img:hover {
-    filter: grayscale(100%);
+
+.caratulas div img:hover {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+    z-index: -1;
 }
 
 .btn {
