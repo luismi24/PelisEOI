@@ -71,7 +71,7 @@ section {
     padding-bottom: 27px;
 }
 .caratulas img:hover {
-    filter: grayscale(70%);
+    filter: grayscale(100%);
 }
 
 .btn {
