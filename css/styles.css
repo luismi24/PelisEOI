@@ -9,11 +9,19 @@ body {
 nav {
     height: 68px;
     background-color: #1b2126;
-    color: #b1b5b8;
     font-family: 'Nunito sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
     width: 100%;
+}
+li a {
+    
+    text-decoration: none;
+    color: #b1b5b8;
+}
+li a:hover {
+    background-color: #b1b5b8;
+    color: #1b2126;
 }
 .container {
     display: flex;
