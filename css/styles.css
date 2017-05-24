@@ -66,32 +66,49 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 31px;
+    font-family: 'Nunito sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #b1b5b8;
+    margin:0;
 }
 .caratulas img {
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .caratulas img:hover {
     -webkit-filter: brightness(40%);
     filter: brightness(40%);
-    z-index: -1;
-}
-.div1 {
-    position: relative;
     
+}
+.main-div-img:hover > .valoraciones {
+    z-index: 5;
+}
+
+.main-div-img {
+    position: relative;
+    margin-bottom: 27px;
 }
 
 .valoraciones {
-    background-color: red;
+    background-color: black;
     position:absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     right: 0;
     height: 42px;
+    z-index: -1;
+    color: white;
+    display: flex;
+}
+.valoraciones img {
+    padding-top: 13px;
+    padding-left: 40px;
+    margin: 0;
 }
 
 .btn {
