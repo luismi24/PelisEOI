@@ -14,6 +14,8 @@
 
         ////////////////
 
-        function activate() { }
+        function activate() {
+            $scope.peliculas = PeliculasFactory.getAll();
+         }
     }
 })();
