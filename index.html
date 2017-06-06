@@ -34,9 +34,8 @@
           <div>
               <p>-----O-----O-----</p>
           </div>
-          <div class="btn" ng-repeat="genero in generos track by $index">
-              <button>{{genero.name}}</button>
-              
+          <div class="btn">
+              <button ng-repeat="genero in generos track by $index">{{genero.name}}</button>   
           </div>
        </sidebar>
        <section>

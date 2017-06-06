@@ -114,6 +114,7 @@ section {
 .btn {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .btn button {
     border: 2px solid #e9ecee;
