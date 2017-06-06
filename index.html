@@ -9,7 +9,7 @@
    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
    <meta charset="UTF-8">
 </head>
-<body>
+<body ng-controller="PeliculasController">
 
 <nav>
        <div class="wrapper container">
@@ -57,36 +57,17 @@
           </div>
        </sidebar>
        <section>
-          <div class="seccionimg">
+          <div class="seccionimg" >
           <div class="barraimg">107,875 peliculas encontradas</div>
           <div class="caratulas">
-              <div class="main-div-img">
-                  <img src="img/caratulapeli.png" width="269px" height="403px" alt="pelicula">
+              <div class="main-div-img" ng-repeat="movie in movies track by $index">
+                  <p>{{}}</p>
+                  <img ng-src="{{img + movie.poster_path}}" width="269px" height="403px" alt="pelicula">
                   <div class="valoraciones">
                       <img src="img/star.png" alt="" width="16" height="16"><p>8.4</p>
                       <img src="img/tomato.png" alt="" width="16" height="16"><p>77%</p>
                       <img src="img/popcorn.png" alt width="16" height="16"><p>77%</p>
                   </div>
-              </div>
-              <div class="main-div-img">
-                    <img src="img/caratulapeli.png" width="269" height="403" alt="pelicula">
-                    <div class="valoraciones"></div>
-              </div>
-              <div class="main-div-img">
-                    <img src="img/caratulapeli.png" width="269" height="403" alt="pelicula">
-                    <div class="valoraciones"></div>             
-              </div>
-              <div class="main-div-img">
-                    <img src="img/caratulapeli.png" width="269" height="403" alt="pelicula">
-                    <div class="valoraciones"></div>
-              </div>
-              <div class="main-div-img">
-                    <img src="img/caratulapeli.png" width="269" height="403" alt="pelicula">
-                    <div class="valoraciones"></div>
-              </div>
-              <div class="main-div-img">
-                  <img src="img/caratulapeli.png" width="269" height="403" alt="pelicula">
-                  <div class="valoraciones"></div>
               </div>
           </div>
           </div>
