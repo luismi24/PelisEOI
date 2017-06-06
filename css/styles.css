@@ -115,19 +115,18 @@ section {
     display: flex;
     flex-wrap: wrap;
 }
-.btn a {
+.btn button {
     border: 2px solid #e9ecee;
     color: #8e9297;
-    text-align: center;
-    text-decoration: none;
     width: 115px;
     height: 33px;
     margin: 9px 8px;
     border-radius: 5px;
     padding-top: 5px;
     box-sizing: border-box;
+    background-color: white;
 }
-.btn a:hover, .btn a:active {
+.btn button:hover {
     color: #2883d8; 
     border-color: #2883d8;
 }
