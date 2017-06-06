@@ -127,7 +127,7 @@ section {
     padding-top: 5px;
     box-sizing: border-box;
 }
-.btn a:hover {
+.btn a:hover, .btn a:active {
     color: #2883d8; 
     border-color: #2883d8;
 }
