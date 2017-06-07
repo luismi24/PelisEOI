@@ -37,7 +37,7 @@
               <p>-----O-----O-----</p>
           </div>
           <div class="botn">
-              <button ng-repeat="genero in generos track by $index">{{genero.name}}</button>
+              <button ng-click="filterbyGenres(genero.id)" ng-repeat="genero in generos track by $index">{{genero.name}}</button>
           </div>
        </sidebar>
        <section>
@@ -65,7 +65,7 @@
                            <div>
                                <div class="details-container">
                                    <div class="superior">
-                                       <h2>{{newMovie.title}}</h2> <p>{{newMovie.release_date}}</p>
+                                       <h2>{{newMovie.title}}</h2> <p>{{newMovie.release_date}}</p><p>{{newMovie.overview}}</p>
                                        <img src="" width="46" height="46" alt="">
                                     </div>
                                        <div>

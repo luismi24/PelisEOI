@@ -13,6 +13,7 @@
         $scope.generaGeneros = generaGeneros;
         $scope.detailView = detailView;
         $scope.newMovie = {};
+        $scope.filterbyGenres = filterbyGenres;
         activate();
 
         ////////////////
@@ -37,6 +38,12 @@
          }
          function detailView(movie){
             $scope.newMovie = movie;
+         }
+         function filterbyGenres(genreId){
+             PeliculasHttp.filterbygenre(genreId)
+             .then(function(movies){
+                 $scope.movies = movies;
+             })
          }
     }
 })();
