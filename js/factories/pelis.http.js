@@ -18,7 +18,7 @@
         ////////////////
         
         function searchPelicula() {
-            return $http.get(staticUrl +'/discover/movie?'+apiKey+'&language=es-ES&sort_by=popularity.desc&page=1')
+            return $http.get(staticUrl +'/discover/movie?'+apiKey+'&language=es-ES&sort_by=popularity.desc&page=1&with_genres=')
                 .then(function(response){
                     return response.data.results;
                 });

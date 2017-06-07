@@ -11,6 +11,8 @@
         $scope.img = 'https://image.tmdb.org/t/p/w500';
         $scope.busquedaPelis = busquedaPelis;
         $scope.generaGeneros = generaGeneros;
+        $scope.detailView = detailView;
+        $scope.newMovie = {};
         activate();
 
         ////////////////
@@ -32,6 +34,9 @@
                  console.log(generos);
                  $scope.generos = generos;
              })
-         }       
+         }
+         function detailView(movie){
+            $scope.newMovie = movie;
+         }
     }
 })();

@@ -23,12 +23,12 @@ li a:hover {
     background-color: #b1b5b8;
     color: #1b2126;
 }
-.container {
+.containere {
     display: flex;
 }
 
 .formatolista {
-    padding-top: 7px;
+    padding-top: 22px;
     padding-left: 60px;
     list-style-type: none;
     display: flex;
@@ -42,6 +42,14 @@ li a:hover {
     background-color: #5c6269;
     padding-left: 0px;
     margin-top: 15px;
+}
+input {
+    background-color: #5c6269;
+    border: none;
+    height:35px;
+    margin-left: 10px;
+    width:200px;
+    
 }
 .logo {
     margin-top: 19px;
@@ -111,12 +119,12 @@ section {
     margin: 0;
 }
 
-.btn {
+.botn {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.btn button {
+.botn button {
     border: 2px solid #e9ecee;
     color: #8e9297;
     width: 115px;
@@ -127,7 +135,7 @@ section {
     box-sizing: border-box;
     background-color: white;
 }
-.btn button:hover {
+.botn button:hover {
     color: #2883d8; 
     border-color: #2883d8;
 }
