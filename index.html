@@ -17,15 +17,17 @@
          <div class="logo">
             <img src="img/logopelis.png" width="142px" height="31px"alt="logo">
          </div>
+         <div>
             <ul class="formatolista"> 
                <li >Categorías</li>
                <li ng-click="topRatedd()">Mejor Valoradas</li>
                <li >Populares ahora</li>
                <li >Próximamente</li>
             </ul>
-            <div class="wrapper lupa">
-                <img src="img/iconobusqueda.png" width="19px" height="19px" alt="lupa">
-                <input type="text" placeholder="Buscar...">
+         </div>
+            <div class="input-group derecha">
+                <span ng-click="searchFilmss(buscapeli)" class="input-group-addon myform noborder"><i class="fa fa-search" aria-hidden="true"></i></span>
+                <input placeholder="Buscar..." ng-model="buscapeli" type="text" class="form-control myform noborder" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
             </div>
        </div>
    </nav>

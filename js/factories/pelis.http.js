@@ -11,7 +11,8 @@
             searchPelicula:searchPelicula,
             generos:generos,
             filterbygenre:filterbygenre,
-             topRated: topRated
+            topRated: topRated,
+            searchFilms:searchFilms
         };
         var staticUrl = 'https://api.themoviedb.org/3';
         var apiKey = 'api_key=6d902fed9905cee850c1703213b4e631';
@@ -41,6 +42,12 @@
         }
         function topRated(){
             return $http.get(staticUrl+'/discover/movie?'+apiKey+'&language=es-ES&sort_by=popularity.desc&page=1')
+            .then(function(response){
+                return response.data.results;
+            })
+        }
+        function searchFilms(buscapeli){
+            return $http.get(staticUrl+'/search/movie?'+apiKey+'&query='+buscapeli+'&page=1')
             .then(function(response){
                 return response.data.results;
             })

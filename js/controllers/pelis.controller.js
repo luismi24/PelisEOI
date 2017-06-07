@@ -15,6 +15,7 @@
         $scope.newMovie = {};
         $scope.filterbyGenres = filterbyGenres;
         $scope.topRatedd = topRatedd;
+        $scope.searchFilmss = searchFilmss;
         activate();
 
         ////////////////
@@ -47,8 +48,15 @@
              })
          }
          function topRatedd(){
-             PeliculasHttp. topRated()
+             PeliculasHttp.topRated()
              .then(function(movies){
+                 $scope.movies = movies;
+             })
+         }
+         function searchFilmss(buscapeli){
+             PeliculasHttp.searchFilms(buscapeli)
+             .then(function(movies){
+                 console.log(movies);
                  $scope.movies = movies;
              })
          }

@@ -27,6 +27,14 @@ li:hover {
 .containere {
     display: flex;
 }
+.noborder{
+    border:none;
+}
+.myform{
+    background-color: #5c6269;
+    color: #fff;
+    opacity: 0.5;
+}
 
 .formatolista {
     padding-top: 22px;
@@ -44,14 +52,12 @@ li:hover {
     padding-left: 0px;
     margin-top: 15px;
 }
-input {
-    background-color: #5c6269;
-    border: none;
-    height:35px;
-    margin-left: 10px;
-    width:200px;
+
+.derecha{
+    width: 30%;
     
 }
+
 .logo {
     margin-top: 19px;
 }
