@@ -14,6 +14,7 @@
         $scope.detailView = detailView;
         $scope.newMovie = {};
         $scope.filterbyGenres = filterbyGenres;
+        $scope.topRatedd = topRatedd;
         activate();
 
         ////////////////
@@ -41,6 +42,12 @@
          }
          function filterbyGenres(genreId){
              PeliculasHttp.filterbygenre(genreId)
+             .then(function(movies){
+                 $scope.movies = movies;
+             })
+         }
+         function topRatedd(){
+             PeliculasHttp. topRated()
              .then(function(movies){
                  $scope.movies = movies;
              })

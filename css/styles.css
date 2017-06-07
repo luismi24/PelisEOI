@@ -14,12 +14,12 @@ nav {
     font-size: 16px;
     width: 100%;
 }
-li a {
+li {
 
     text-decoration: none;
     color: #b1b5b8;
 }
-li a:hover {
+li:hover {
     background-color: #b1b5b8;
     color: #1b2126;
 }
