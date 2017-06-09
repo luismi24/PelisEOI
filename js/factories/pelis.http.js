@@ -15,7 +15,8 @@
             topRated: topRated,
             searchFilms: searchFilms,
             bestVoted:bestVoted,
-            totalResults:totalResults
+            totalResults:totalResults,
+            getvideo:getvideo
         };
         var staticUrl = 'https://api.themoviedb.org/3';
         var apiKey = 'api_key=6d902fed9905cee850c1703213b4e631';
@@ -76,6 +77,12 @@
             return $http.get(staticUrl + '/discover/movie?' + apiKey + '&language=es-ES&include_video=true&sort_by=popularity.desc&page=1')
             .then(function(response){
                 return response.data.total_results;
+            })
+        }
+        function getvideo(id){
+            return $http.get('https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=6d902fed9905cee850c1703213b4e631&language=es-ES')
+            .then(function(response){
+                return response.data.results;
             })
         }
     }

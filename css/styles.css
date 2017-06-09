@@ -129,6 +129,7 @@ section {
     z-index: -1;
     color: white;
     display: flex;
+    
 }
 
 .valoraciones img {
@@ -158,4 +159,42 @@ section {
 .botn button:hover {
     color: #2883d8;
     border-color: #2883d8;
+}
+
+.modalcontainer {
+    background-color: #fff;
+}
+
+#modaltitle{
+    font-family: 'NunitoSans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color:#000;
+    margin-left: 2%
+}
+
+#modaldate{
+
+   font-family: 'NunitoSans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color:#a4a8ac ;
+    margin-left: 2%
+}
+
+.modaloverview{
+
+   font-family: 'NunitoSans', sans-serif;
+    font-weight: 400;
+    font-size: 10,87px;
+    color:#a4a8ac ;font-family: 'NunitoSans', sans-serif;
+    font-weight: 400;
+    font-size: 10,87px;
+    color:#a4a8ac ;
+    margin-top: 3%;
+}
+
+#modalposter{
+    margin-left: 2%;
+    margin-bottom: 5%;
 }

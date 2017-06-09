@@ -54,7 +54,7 @@
                         <div class="valoraciones">
                             <img src="img/star.png" alt="" width="16" height="16">
                             <p>{{movie.vote_average}}</p>
-                            <img src="img/tomato.png" alt="" width="16" height="16">
+                            <img src="/img/tomato.png" alt="" width="16" height="16">
                             <p>{{movie.vote_average}}</p>
                             <img src="img/popcorn.png" alt width="16" height="16">
                             <p>{{movie.vote_average}}</p>
@@ -63,33 +63,29 @@
                 </div>
             </div>
         </section>
-        <div class="modal fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div>
-                            <div class="details-container">
-                                <div class="superior">
-                                    <h2>{{newMovie.title}}</h2>
-                                    <p>{{newMovie.release_date}}</p>
-                                    <p>{{newMovie.overview}}</p>
-                                    <!--img src="img/close.png" width="46" height="46" alt=""-->
-                                </div>
-                                <div>
-                                    <img ng-src="{{img + newMovie.poster_path}}" width="70%" alt="">
-                                </div>
-                            </div>
+        <div class="modal fade bs-example-modal-lg" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content modalcontainer">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <p id="modaltitle">{{newMovie.title}}</p>
+                            <p id="modaldate">{{newMovie.release_date}}</p>
+                            <img id="modalposter" ng-src="{{img + newMovie.poster_path}}" width="90%">
                         </div>
-                    </div>
-                    <div class="modal-footer">
+                        <div class="col-xs-6 modaloverview">
+                            <h2>Sinopsis</h2>
+                            <img src="img/star.png" height="16px" width="16px">
+                            <p>{{newMovie.vote_average}}
+                            <p>{{newMovie.overview}}</p>
+                        </div>
+                        <div class="col-xs-6">
+                            <h3>Trailer</h3>
+                            <iframe ng-src="{{trailer}}" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="libs/bootstrap.min.js"></script>
     <script src='libs/angular.min.js'></script>
