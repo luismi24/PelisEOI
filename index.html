@@ -38,7 +38,7 @@
     <div class="containere wrapper">
         <sidebar>
             <div>
-                <p>-----O-----O-----</p>
+                <img src="img/slider.png" alt="slider"  width="100%">
             </div>
             <div class="botn">
                 <button ng-click="filterbyGenres(genero.id)" ng-repeat="genero in generos track by $index">{{genero.name}}</button>
@@ -75,7 +75,7 @@
                         <div class="col-xs-6 modaloverview">
                             <h2>Sinopsis</h2>
                             <img src="img/star.png" height="16px" width="16px">
-                            <p>{{newMovie.vote_average}}
+                            <p>Valoración {{newMovie.vote_average}}
                             <p>{{newMovie.overview}}</p>
                         </div>
                         <div class="col-xs-6">
