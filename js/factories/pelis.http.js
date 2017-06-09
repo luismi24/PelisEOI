@@ -13,7 +13,9 @@
             generos: generos,
             filterbygenre: filterbygenre,
             topRated: topRated,
-            searchFilms: searchFilms
+            searchFilms: searchFilms,
+            bestVoted:bestVoted,
+            totalResults:totalResults
         };
         var staticUrl = 'https://api.themoviedb.org/3';
         var apiKey = 'api_key=6d902fed9905cee850c1703213b4e631';
@@ -23,7 +25,7 @@
         ////////////////
 
         function searchPelicula() {
-            return $http.get(staticUrl + '/discover/movie?' + apiKey + '&language=es-ES&sort_by=popularity.desc&page=1')
+            return $http.get(staticUrl + '/discover/movie?' + apiKey + '&language=es-ES&include_video=true&sort_by=popularity.desc&page=1')
                 .then(function (response) {
                     return response.data.results;
                 });
@@ -32,7 +34,6 @@
         function generos() {
             return $http.get(staticUrl + '/genre/movie/list?' + apiKey + '&language=es-ES')
                 .then(function (response) {
-
                     return response.data.genres;
                 });
         }
@@ -56,6 +57,26 @@
                 .then(function (response) {
                     return response.data.results;
                 })
+        }
+
+        function bestVoted() {
+            return $http.get(staticUrl + '/discover/movie?' + apiKey + '&language=es-ES&sort_by=vote_average.desc&page=1')
+                .then(function (response) {
+                    return response.data.results;
+                })
+        }
+
+        function nextFilms() {
+            return $http.get(staticUrl + '/discover/movie?' + apiKey + '&language=es-ES&sort_by=primary_release_date.desc&page=1')
+                .then(function (response) {
+                    return response.data.results;
+                })
+        }
+        function totalResults(){
+            return $http.get(staticUrl + '/discover/movie?' + apiKey + '&language=es-ES&include_video=true&sort_by=popularity.desc&page=1')
+            .then(function(response){
+                return response.data.total_results;
+            })
         }
     }
 })();

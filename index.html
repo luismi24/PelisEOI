@@ -24,8 +24,8 @@
                 <ul class="formatolista">
                     <li>Categorías</li>
                     <li ng-click="topRatedd()">Mejor Valoradas</li>
-                    <li>Populares ahora</li>
-                    <li>Próximamente</li>
+                    <li ng-click="bestVotedd()">Populares ahora</li>
+                    <li ng-click="nextFilmss()">Próximamente</li>
                 </ul>
             </div>
             <div class="input-group derecha">
@@ -46,7 +46,7 @@
         </sidebar>
         <section>
             <div class="seccionimg">
-                <div class="barraimg">107,875 peliculas encontradas</div>
+                <div class="barraimg">{{movies.length}} / {{results}} peliculas encontradas</div>
                 <div class="caratulas">
                     <div class="main-div-img" ng-repeat="movie in movies track by $index">
                         <img ng-click="detailView(movie)" data-toggle="modal" data-target="#themodal" ng-src="{{img + movie.poster_path}}" width="269px"

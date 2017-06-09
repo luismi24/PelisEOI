@@ -17,6 +17,8 @@
         $scope.filterbyGenres = filterbyGenres;
         $scope.topRatedd = topRatedd;
         $scope.searchFilmss = searchFilmss;
+        $scope.totalResultss = totalResultss;
+        $scope.results = {};
         activate();
 
         ////////////////
@@ -24,6 +26,7 @@
         function activate() {
             busquedaPelis();
             generaGeneros();
+            totalResultss();
         }
 
         function busquedaPelis() {
@@ -65,6 +68,12 @@
                 .then(function (movies) {
                     console.log(movies);
                     $scope.movies = movies;
+                })
+        }
+        function totalResultss() {
+            PeliculasHttp.totalResults()
+                .then(function(response){
+                    $scope.results = response;
                 })
         }
     }

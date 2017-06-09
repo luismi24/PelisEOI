@@ -44,11 +44,11 @@ li:hover {
 
 .formatolista {
     padding-top: 22px;
-    padding-left: 60px;
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 505px;
+    margin-left: 85px;
 }
 
 .lupa {
@@ -61,6 +61,8 @@ li:hover {
 
 .derecha {
     width: 30%;
+    margin-top: 1.1%;
+    margin-left: 7%
 }
 
 .logo {
